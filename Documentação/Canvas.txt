@@ -1,0 +1,57 @@
+JUSTIFICATIVA: 
+A busca pelo amor através de aplicativos de encontro se tornou uma realidade na sociedade atual, mas isso resultou em alguns problemas que antes não existiam. Por mais que a aparência chame a atenção, as pessoas precisam de um certo grau de afinidade para iniciar um relacionamento, o qual não foi contemplado nos metodos utilizados por aplicativos de encontro convencionais. 
+
+OBJ SMART:
+Criar um aplicativo onde os encontros e relações serão decididos a partir dos gostos e afinidades.
+
+BENEFICIOS:
+Melhor compatibilidade de casais. 
+Maior chances de futuros encontros. 
+Personalidades mais semelhantes um ao outro.
+
+PRODUTO:
+Um aplicativo de encontro Mobile.
+
+REQUISITOS:
+Informações como nome, idade, afinidades e uma breve descrição. Conexão com a internet. Encontros devem ser feitos em locais públicos. 
+
+STAKEHOLDERS:
+Joab Almeida, Lucas Rodrigues e Vanessa Coelho.
+
+EQUIPE:
+Joab Almeida, Lucas Rodrigues e Vanessa Coelho.
+
+PREMISSA:
+A entrega do aplicativo será realizada no mês de junho. O aplicativo rodará em qualquer celular Android/iOS e os dados serão enviados para um servidor.
+
+
+
+GRUPO DE ENTREGAS:
+Alocação em servidor. 
+Distribuição da aplicação pela Play Store e Apple Store. 
+API de GPS da Google.  
+Documentação da aplicação.
+
+
+RESTRIÇÕES:
+O tempo limite de quatro meses. 
+Poucos recursos financeiros.
+Projeto desenvolvido inteiramente por teletrabalho. 
+
+
+RISCO: 
+Problemas com operadora de internet. 
+Atrasos por imprevistos e bloqueio criativo. 
+Falta de investimento. 
+Adoecimento ou fatalidade de um ou mais membros. 
+
+
+LINHA DO TEMPO:
+26/02/2021 Primeira reunião.
+28/02/2021 Segunda reunião.
+30/06/2021 Entrega.
+
+
+
+
+
