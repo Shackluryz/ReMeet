@@ -1,0 +1,2 @@
+Esse usuário poderá visualizar e interagir com outros usuários disponibilizados 
+para ele de acordo com o nível de compatibilidade que o sistema identificar. 
