@@ -1,0 +1,25 @@
+Funcional
+Manter cadastro
+Manter informações
+Efetuar Login
+Arratar cartões
+Dar like
+Dar deslike
+Dar match
+Desfazer match
+Estabelecer comunicação
+Denunciar usuário
+
+
+Não funcional
+GPS
+Interface intuitiva e atrativa
+Segurança - criptografia
+Escalável
+Armazenamento de dados da nuvem
+Maioridade
+Confiabilidade (definidos como visíveis pelo usuário)
+
+
+
+
