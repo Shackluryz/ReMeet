@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "382161159190",
+    "project_id": "remeet-7c404",
+    "storage_bucket": "remeet-7c404.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382161159190:android:f288265c7e80d00ddfa137",
+        "android_client_info": {
+          "package_name": "com.shackluryz.remeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382161159190-raar3o7stiik4ppbe94e0acafpl7lgai.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shackluryz.remeet",
+            "certificate_hash": "5f9db99fef817133936b612b88c5dfb9b13d9e72"
+          }
+        },
+        {
+          "client_id": "382161159190-8r9anfs2a2jqjrt1c4qug5ajgab89ng3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByMTf0P0wIJScHdacFq71cJcERkVWGyVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382161159190-8r9anfs2a2jqjrt1c4qug5ajgab89ng3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
