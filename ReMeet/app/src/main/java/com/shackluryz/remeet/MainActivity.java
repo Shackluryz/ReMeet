@@ -44,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        usersDb = FirebaseDatabase.getInstance().getReference().child("Users");
+
         mAuth = FirebaseAuth.getInstance();
+        currentUid = mAuth.getCurrentUser().getUid();
 
         checkUserSex();
         rowItems = new ArrayList<>();
@@ -67,14 +70,20 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onLeftCardExit(Object dataObject) {
-                //Do something on the left!
-                //You also have access to the original object.
-                //If you want to use it just cast it (String) dataObject
+
+                cards obj = (cards) dataObject;
+                String userId = obj.getUserId();
+                usersDb.child(oppositeUserSex).child(userId).child("connections").child("nope").child(currentUid).setValue(true);
                 Toast.makeText(MainActivity.this, "left", Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
+
+                cards obj = (cards) dataObject;
+                String userId = obj.getUserId();
+                usersDb.child(oppositeUserSex).child(userId).child("connections").child("yeps").child(currentUid).setValue(true);
                 Toast.makeText(MainActivity.this, "right", Toast.LENGTH_SHORT).show();
             }
 
@@ -168,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChildAdded(DataSnapshot snapshot, String previousChildName) {
 
-                if(snapshot.exists()){
+                if(snapshot.exists() && !snapshot.child("connections").child("nope").hasChild(currentUid) && !snapshot.child("connections").child("yeps").hasChild(currentUid)){
 
                     cards item = new cards(snapshot.getKey(), snapshot.child("name").getValue().toString());
                     rowItems.add(item);
