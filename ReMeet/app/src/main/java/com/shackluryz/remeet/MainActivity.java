@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         currentUid = mAuth.getCurrentUser().getUid();
 
         checkUserSex();
-        rowItems = new ArrayList<cards>();
+        rowItems = new ArrayList<>();
         arrayAdapter = new arrayAdapter(this, R.layout.item, rowItems);
 
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
@@ -124,39 +124,30 @@ public class MainActivity extends AppCompatActivity {
 
     private String userSex;
     private String oppositeUserSex;
-
     public void checkUserSex() {
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         DatabaseReference userDb = usersDb.child(user.getUid());
-        userDb.addChildEventListener(new ChildEventListener() {
+        userDb.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onChildAdded(DataSnapshot snapshot, String previousChildName) {
-                    if(snapshot.exists()){
-                        if(snapshot.child("sex").getValue() != null){
-                            userSex = snapshot.child("sex").getValue().toString();
-                            switch (userSex){
-                                case "Male":
-                                    oppositeUserSex = "Female";break;
-                                case "Female":
-                                    oppositeUserSex = "Male";break;
-                            }
-                            getOppositeSexUsers();
-
+            public void onDataChange(DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    if(snapshot.child("sex").getValue() != null){
+                        userSex = snapshot.child("sex").getValue().toString();
+                        switch(userSex) {
+                            case "Male":
+                                oppositeUserSex = "Female";break;
+                            case "Female":
+                                oppositeUserSex = "Male";break;
                         }
+                        getOppositeSexUsers();
                     }
+                }
+
             }
 
-            @Override
-            public void onChildChanged(DataSnapshot snapshot, String previousChildName) {
-            }
-            @Override
-            public void onChildRemoved(DataSnapshot snapshot) {
-            }
-            @Override
-            public void onChildMoved(DataSnapshot snapshot, String previousChildName) {
-            }
             @Override
             public void onCancelled(DatabaseError error) {
+
             }
         });
     }
