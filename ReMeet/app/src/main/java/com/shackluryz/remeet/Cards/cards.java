@@ -1,6 +1,7 @@
-package com.shackluryz.remeet;
+package com.shackluryz.remeet.Cards;
 
 public class cards {
+
     private String userId;
     private String name;
     private String profileImageUrl;
