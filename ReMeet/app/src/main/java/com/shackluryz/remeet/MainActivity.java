@@ -1,14 +1,11 @@
 package com.shackluryz.remeet;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -21,6 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
+import com.shackluryz.remeet.Cards.arrayAdapter;
+import com.shackluryz.remeet.Cards.cards;
+import com.shackluryz.remeet.Matches.MatchesActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private cards cards_data[];
-    private arrayAdapter arrayAdapter;
+    private com.shackluryz.remeet.Cards.arrayAdapter arrayAdapter;
     private int i;
     private FirebaseAuth mAuth;
     private String currentUid;
@@ -197,4 +197,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToMatches(View view) {
+        Intent intent = new Intent(MainActivity.this, MatchesActivity.class);
+        startActivity(intent);
+    }
 }

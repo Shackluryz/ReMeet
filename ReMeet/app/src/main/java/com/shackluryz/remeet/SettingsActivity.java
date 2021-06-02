@@ -153,7 +153,6 @@ public class SettingsActivity extends AppCompatActivity {
                             Map newImage = new HashMap();
                             newImage.put("profileImageUrl", uri.toString());
                             mUserDatabase.updateChildren(newImage);
-
                             finish();
                             return;
                         }
