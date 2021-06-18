@@ -39,7 +39,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Preencha os dados"
-                        android:textColor="@color/red"
+                        android:textColor="#FBC87C"
                         android:textSize="23dp"
                         android:textStyle="bold"
                         android:layout_gravity="center_horizontal"/>
@@ -110,21 +110,22 @@
                         <RadioButton
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Masculino"/>
+                            android:text="Male"/>
                         <RadioButton
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Feminino"/>
+                            android:text="Female"/>
                     </RadioGroup>
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/register"
-                        android:layout_width="match_parent"
+                        android:layout_width="292dp"
                         android:layout_height="wrap_content"
                         style="@android:style/Widget.Material.Button.Borderless.Colored"
                         android:layout_marginTop="25dp"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginBottom="25dp"
-                        android:background="@color/red"
+                        android:background="@drawable/roundcorner"
                         android:padding="12dp"
                         android:text="Registrar"
                         android:textColor="@color/white"
@@ -137,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/existing"
                     android:padding="15sp"
-                    android:text="Existing User? Please Login"
+                    android:text="Já é cadastrado?"
                     android:layout_gravity="center_horizontal"
                     />
 

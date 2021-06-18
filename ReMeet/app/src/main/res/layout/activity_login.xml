@@ -80,18 +80,27 @@
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/login"
-                        android:layout_width="match_parent"
+                        android:layout_width="292dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
                         android:layout_marginTop="25dp"
                         android:layout_marginBottom="25dp"
-                        android:background="@color/bg_screen1"
+                        android:background="@drawable/roundcorner"
                         android:padding="12dp"
                         android:text="Entrar"
                         android:textColor="@color/white"
-                        android:textStyle="bold"/>
-
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/existing"
+                        android:padding="15sp"
+                        android:text="Não possui uma conta?"
+                        android:layout_gravity="center_horizontal"
+                        />
 
                 </LinearLayout>
+
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>

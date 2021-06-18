@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        TextView existing = (TextView) findViewById(R.id.existing);
         mAuth = FirebaseAuth.getInstance();
         firebaseAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -43,6 +44,15 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         };
+        existing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, RegistrationActivity.class);
+                startActivity(i);
+                finish();
+                return;
+            }
+        });
 
 
         mLogin = (Button) findViewById(R.id.login);
